@@ -13,12 +13,13 @@
         </div>
     </div>
     <script>
-        const clock = document.querySelector('.clock');
-        setInterval(()=>{
-            const currTime=new Date().toLocaleTimeString();
-            clock.textContent=currTime;
-        },1000);
-
+     const clock = document.querySelector('.clock');
+        function updateClock() {
+            const currTime = new Date().toLocaleTimeString();
+            clock.textContent = currTime;
+        }
+        updateClock(); 
+        setInterval(updateClock, 1000);
     </script>
 </body>
 </html>
